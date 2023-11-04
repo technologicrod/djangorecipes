@@ -9,6 +9,8 @@ Admin users can do the same thing but can also view, edit, and delete ALL recipe
 Data are not actually deleted but only changed its status from "Active" to "Inactive" to avoid data deletion completely 
 but these "deleted" data can't be seen in the UI but can be seen in the /admin.
 
+To run, use the command "python manage.py runserver" to run the server/localhost.
+
 Sample users:
 Admin accounts:
 1.) email - matchon.rodwell@gmail.com
