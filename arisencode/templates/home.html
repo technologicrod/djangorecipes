@@ -19,13 +19,4 @@
   </center>
 </div>
 
-<div>
-  <h2>All Profiles:</h2>
-  <ul>
-    {% for profile in all_items %}
-      <li>{{ profile.email }} - {{ profile.account_type }} - {{ profile.password }}</li>
-    {% endfor %}
-  </ul>
-</div>
-
 {% endblock %}
