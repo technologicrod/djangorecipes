@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+  {% if user_email %} 
+    <center>
+        <h1>Hello, {{ user_email }}. Edit your recipe!</h1>
+        <form method="POST" action="{% url 'editrecipe' id %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="editbutton">Update</button>
+        </form>
+        <br>
+        <a href="{% url 'dashboard' %}"><button class="loginbutton">Go to Dashboard</button></a>
+    </center>
+  {% else %}
+  <center>
+    <h2>No Data</h2>
+  </center>
+  {% endif %}
+</div>
+
+{% endblock %}

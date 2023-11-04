@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+  {% if user_email %} 
+    <center>
+        <h1>Hello, {{ user_email }}. Create your new recipe!</h1>
+        <form method="POST" action="{% url 'saverecipe' %}">
+            {% csrf_token %}
+            <!--<h5>Recipe Name</h5>
+            <input type="text" name="name">
+            <h5>Ingredients</h5>
+            <textarea name="ingredients"></textarea>
+            <h5>Instructions</h5>
+            <textarea name="instructions"></textarea>
+            <br>
+            <br>-->
+            {{ form.as_p }}
+            <button type="submit" class="createbutton">Create</button>
+        </form>
+        <br>
+        <a href="{% url 'dashboard' %}"><button class="loginbutton">Go to Dashboard</button></a>
+    </center>
+  {% else %}
+  <center>
+    <h2>No Data</h2>
+  </center>
+  {% endif %}
+</div>
+
+{% endblock %}

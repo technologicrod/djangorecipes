@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+  
+  <br>
+  <a href="{%url 'logout' %}"><button class="backbutton">Logout</button></a>
+  {% if user_email %}  
+    {% if account_type == "admin" %}
+      <center>
+        <h1>Hello {{ user_email }}. This is the ADMIN DASHBOARD </h1>
+        <h4>Acc Type: {{ account_type }}</h4>
+        <a href="{%url 'dashboard' %}"><button class="loginbutton">My Dashboard</button></a>
+      </center>
+      <a href="{%url 'addrecipe' %}"><button class="createbutton">Create New Recipe</button></a>
+      <center>
+        <table class="tabledata">
+          <thead>
+            <tr>
+              <th> Recipe Name</th>
+              <th> Ingredients</th>
+              <th> Instructions</th>
+              <th> Owned by</th>
+              <th> Edit</th>
+              <th> Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for recipe in recipes %}
+              {% if recipe.status == "Active" %}
+              <tr>
+                <td>{{ recipe.name }}</td>
+                <td>{{ recipe.ingredients }}</td>
+                <td>{{ recipe.instructions }}</td>
+                <td>{{ recipe.user }}</td>
+                <td><a href="{%url 'editrecipe' recipe.id %}"><button class="editbutton">edit</button></a></td>
+                <td><a href="{%url 'inactiverecipeadmin' recipe.id %}"><button class="deletebutton">delete</button></a></td>
+              </tr>
+              {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </center>
+    {% else %}
+    <center>
+      <h1>Hello {{ user_email }}. Access denied.</h1>
+      <h4>Acc Type: {{ account_type }}</h4>
+      <a href="{%url 'dashboard' %}"><button>My Dashboard</button></a>
+    </center>
+    {% endif %}
+  {% else %}
+  <center>
+    <h2>No Data</h2>
+  </center>
+  {% endif %}
+</div>
+
+{% endblock %}

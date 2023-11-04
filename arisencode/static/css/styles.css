@@ -1,0 +1,95 @@
+* {
+  background-color: white;
+}
+.maindiv {
+  height: 100px;
+  text-align: center;
+  border: blue solid 2px;
+  background-color: #b1c2de;
+  border-radius: 25px;
+}
+.title {
+  color: #002a6e;
+  background-color: transparent;
+}
+.tabledata {
+  width: 98%;
+  margin: 10px auto 20px auto;
+  border-collapse: collapse;
+  border: 2px solid #3f4754;
+  letter-spacing: 1px;
+}
+.tabledata th {
+  background-color: #b1c2de;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid black;
+}
+.tabledata td {
+  text-align: center;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid grey;
+}
+.tabledata tr {
+  background-color: white;
+}
+.tabledata tr:nth-child(even) {
+  background-color: pink;
+}
+select{
+  width: 250px;
+  height: 30px;
+  border-radius: 60px;
+  padding: 5px;
+  font-size: 18px;
+}
+button{
+  border-radius: 60px;
+  width: 120px;
+  height: 50px;
+  border-color: blue;
+}
+input{
+  width: 250px;
+  height: 5px;
+  border-radius: 60px;
+  padding: 20px;
+  font-size: 18px;
+}
+.loginbutton{
+  background-color: #b1c2de;
+}
+.loginbutton:hover{
+  background-color: #002a6e;
+  color: white;
+}
+.createbutton{
+  background-color: #33C191;
+}
+.createbutton:hover{
+  background-color: #438D87;
+  color: white;
+}
+.backbutton{
+  background-color: #8798B3;
+}
+.backbutton:hover{
+  background-color: #15283D;
+  color: white;
+}
+.editbutton{
+  background-color: #DDA01E;
+}
+.editbutton:hover{
+  background-color: #693E00;
+  color: white;
+}
+.deletebutton{
+  background-color: #DEB7C1;
+}
+.deletebutton:hover{
+  background-color: #C28194;
+  color: white;
+}

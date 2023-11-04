@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+  <center>
+    <h1>Login</h1>
+    <form method="POST" action="{%url 'dashboard' %}">
+      {% csrf_token %}
+      <h5>email address</h5>
+      <input type="text" name="email">
+      <h5>password</h5>
+      <input type="password" name="password">
+      <br><br>
+      <br><br>
+      <button type="submit" class="loginbutton">Login</button>
+    </form>
+    <br>
+    <a href="{% url 'create' %}"><button class="createbutton">Create Account</button></a>
+  </center>
+</div>
+
+<div>
+  <h2>All Profiles:</h2>
+  <ul>
+    {% for profile in all_items %}
+      <li>{{ profile.email }} - {{ profile.account_type }} - {{ profile.password }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}
