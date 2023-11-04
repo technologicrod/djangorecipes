@@ -1,6 +1,6 @@
 Trial Project by Rodwell Matchon for Ingenuity requirement using Python Django.
 
-Functions are found in views.py and templates are found in the "arisencode" folder.
+Functions are found in views.py. Templates, views.py, and other essential files are found in the "arisencode" folder.
 
 There are two types of users: Admin and Basic users.
 In the login page, you can create an account and you can choose if it can be an Admin or a Basic user.
