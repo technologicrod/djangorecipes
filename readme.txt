@@ -6,10 +6,10 @@ There are two types of users: Admin and Basic users.
 In the login page, you can create an account and you can choose if it can be an Admin or a Basic user.
 Basic users can create, view, edit, and delete their own recipes.
 Admin users can do the same thing but can also view, edit, and delete ALL recipes in the database through accessing the Admin Dashboard.
-Data are not actually deleted but only changed its status from "Active" to "Inactive" to avoid data deletion completely 
-but these "deleted" data can't be seen in the UI but can be seen in the /admin.
+Data are not actually deleted but only changed its status from "Active" to "Inactive" to avoid data deletion completely.
+However, these "deleted" data can't be seen in the UI but can be seen in the /admin.
 
-To run, use the command "python manage.py runserver" to run the server/localhost:8000.
+To run the server/localhost:8000, use the command "python manage.py runserver".
 
 Sample users:
 Admin accounts:
@@ -21,3 +21,7 @@ Basic accounts:
     password - abc
 2.) email - naruto@gmail.com
     password - naruto
+
+Super User for accessing the /admin to check the database:
+1.) username - admin123
+    password - 123
